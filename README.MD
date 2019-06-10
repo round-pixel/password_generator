@@ -4,5 +4,7 @@ Simple password generator like a https://www.dinopass.com/
 Install dependencies
 `bundle`
 
-Then run
+Run
 `ruby main.rb`
+### Tests
+`rspec`

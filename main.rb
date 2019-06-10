@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'colorize'
 require_relative 'generator'
 
@@ -8,12 +10,12 @@ loop do
   input = gets.chomp
 
   if input.downcase == 'q'
-    puts "Bye".red
+    puts 'Bye'.red
     break
   end
 
   if input.downcase == 'r'
-    password, status, color = password_generator(memory_size)
+    password, _status, color = password_generator(memory_size)
     puts password.public_send(color)
     next
   end
@@ -21,6 +23,6 @@ loop do
   size = input.to_i
   memory_size = size
 
-  password, status, color = password_generator(size)
+  password, _status, color = password_generator(size)
   puts password.public_send(color)
 end
